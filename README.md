@@ -1,3 +1,5 @@
+![Usain Bolt](bolt.gif)
+
 # Vite debundle module for Craft CMS 3.x
 
 Tired of webpack?
