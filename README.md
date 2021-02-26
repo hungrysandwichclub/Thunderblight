@@ -1,5 +1,7 @@
 # Vite debundle module for Craft CMS 3.x
 
+Tired of webpack?
+
 Debundle manifestos from Vite bundler ⚡️
 
 ## Requirements
@@ -10,10 +12,10 @@ This module requires Craft CMS 3.0.0-RC1 or later.
 
 To install the module, follow these instructions.
 
-Firstly add the contents of this repo to a folder in your Modules folder named "vitedebundlemodule".
+Firstly copy the "vitedebundlemodule" folder to your Craft project's Modules folder
 
 ```
-/modules/vitedebundlemodule
+/modules
 ```
 
 Next you'll need to add the contents of the `app.php` file to your `config/app.php` (or just copy it there if it does not exist). This ensures that your module will get loaded for each request. The file might look something like this:
