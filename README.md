@@ -87,15 +87,15 @@ Thus giving us the complete code:
 
 {% else %}
 
-    {% set manifest = '/assets/manifest.json' %}
+    {% set manifest = '/dist/manifest.json' %}
     {% set vite = manifest | vitedebundle %}
 
     {% for css in vite.css %}
-        <link rel="stylesheet" href="/assets/{{ css }}">
+        <link rel="stylesheet" href="/dist/{{ css }}">
     {% endfor %}
 
     {% for js in vite.js %}
-        <script src="/assets/{{ js }}"></script>
+        <script src="/dist/{{ js }}"></script>
     {% endfor %}
 
 {% endif %}
