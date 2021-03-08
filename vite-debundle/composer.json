@@ -1,0 +1,42 @@
+{
+    "name": "hungrysandwichclub/vite-debundle",
+    "description": "Debundle your Vite manifests in Craft ",
+    "type": "craft-plugin",
+    "version": "1.1.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "vite debundle"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hungry Sandwich",
+            "homepage": "https://github.com/hungrysandwichclub"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "hungrysandwichclub\\vitedebundle\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Vite debundle",
+        "handle": "vite-debundle",
+        "developer": "Hungry Sandwich",
+        "developerUrl": "https://github.com/hungrysandwichclub",
+        "documentationUrl": "???",
+        "changelogUrl": "???",
+        "class": "hungrysandwichclub\\vitedebundle\\ViteDebundle"
+    }
+}

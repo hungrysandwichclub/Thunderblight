@@ -1,16 +1,16 @@
 <?php
 /**
- * Vite debundle module for Craft CMS 3.x
+ * Vite debundle plugin for Craft CMS 3.x
  *
- * Debundle manifestos from Vite bundler ⚡️
+ * Debundle your Vite manifests in Craft
  *
  * @link      https://github.com/hungrysandwichclub
  * @copyright Copyright (c) 2021 Hungry Sandwich
  */
 
-namespace modules\vitedebundlemodule\twigextensions;
+namespace hungrysandwichclub\vitedebundle\twigextensions;
 
-use modules\vitedebundlemodule\ViteDebundleModule;
+use hungrysandwichclub\vitedebundle\ViteDebundle;
 
 use Craft;
 
@@ -19,21 +19,29 @@ use Twig\TwigFilter;
 use Twig\TwigFunction;
 
 /**
+ * Twig can be extended in many ways; you can add extra tags, filters, tests, operators,
+ * global variables, and functions. You can even extend the parser itself with
+ * node visitors.
+ *
+ * http://twig.sensiolabs.org/doc/advanced.html
+ *
  * @author    Hungry Sandwich
- * @package   ViteDebundleModule
- * @since     1.0.0
+ * @package   ViteDebundle
+ * @since     1.1.0
  */
-class ViteDebundleModuleTwigExtension extends AbstractExtension
+class ViteDebundleTwigExtension extends AbstractExtension
 {
     // Public Methods
     // =========================================================================
 
     /**
-     * @inheritdoc
+     * Returns the name of the extension.
+     *
+     * @return string The extension name
      */
     public function getName()
     {
-        return 'ViteDebundleModule';
+        return 'ViteDebundle';
     }
 
     /**

@@ -1,6 +1,6 @@
 ![Usain Bolt](bolt.gif)
 
-# Vite debundle module for Craft CMS 3.x
+# Vite debundler for Craft CMS 3.x
 
 Tired of webpack?
 
@@ -12,38 +12,17 @@ This module requires Craft CMS 3.0.0-RC1 or later.
 
 ## Installation
 
-To install the module, follow these instructions.
+To install the plugin, follow these instructions.
 
-Firstly copy the "vitedebundlemodule" folder to your Craft project's Modules folder
+1. Open your terminal and go to your Craft project:
 
-```
-/modules
-```
+        cd /path/to/project
 
-Next you'll need to add the contents of the `app.php` file to your `config/app.php` (or just copy it there if it does not exist). This ensures that your module will get loaded for each request. The file might look something like this:
-```
-return [
-    'modules' => [
-        'vite-debundle-module' => [
-            'class' => \modules\vitedebundlemodule\ViteDebundleModule::class,
-        ],
-    ],
-    'bootstrap' => ['vite-debundle-module'],
-];
-```
-You'll also need to make sure that you add the following to your project's `composer.json` file so that Composer can find your module:
+2. Then tell Composer to load the plugin:
 
-    "autoload": {
-        "psr-4": {
-          "modules\\vitedebundlemodule\\": "modules/vitedebundlemodule/src/"
-        }
-    },
+        composer require /vite-debundle
 
-After you have added this, you will need to do:
-
-    composer dump-autoload
-
- …from the project’s root directory, to rebuild the Composer autoload map. This will happen automatically any time you do a `composer install` or `composer update` as well.
+3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Vite debundle.
 
 ## Using Vite debundle
 
@@ -105,5 +84,5 @@ Thus giving us the complete code:
 
 Some things to do, and ideas for potential features:
 
-* Easier installation - NPX or Craft Plugin?
+* Plugin settings panel - set path to build and server host IP/port
 * Static Assets handling
