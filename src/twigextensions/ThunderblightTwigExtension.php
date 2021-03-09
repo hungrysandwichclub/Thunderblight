@@ -55,7 +55,7 @@ class ThunderblightTwigExtension extends AbstractExtension
     {
         // Get manifest from input and json_decode it
         $path = $input;
-        $assetsManifest = @json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . $path), true) ?: [];
+        $assetsManifest = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . $path), true) ?: [];
 
         // Todo: test how this functions with more than one html file
         $file = $assetsManifest['index.html'];
