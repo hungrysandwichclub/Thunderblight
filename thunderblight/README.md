@@ -1,6 +1,6 @@
-# Vite debundle plugin for Craft CMS 3.x
+# Thunderblight plugin for Craft CMS 3.x
 
-Debundle your Vite manifests in Craft 
+Debundle your Vite manifests quickly
 
 ![Screenshot](resources/img/plugin-logo.png)
 
@@ -18,26 +18,26 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require /vite-debundle
+        composer require Thunderblight/thunderblight
 
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Vite debundle.
+3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Thunderblight.
 
-## Vite debundle Overview
-
--Insert text here-
-
-## Configuring Vite debundle
+## Thunderblight Overview
 
 -Insert text here-
 
-## Using Vite debundle
+## Configuring Thunderblight
 
 -Insert text here-
 
-## Vite debundle Roadmap
+## Using Thunderblight
+
+-Insert text here-
+
+## Thunderblight Roadmap
 
 Some things to do, and ideas for potential features:
 
 * Release it
 
-Brought to you by [Hungry Sandwich](https://github.com/hungrysandwichclub)
+Brought to you by [Hungry Sandwich Club](https://hungrysandwich.club)

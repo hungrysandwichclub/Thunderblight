@@ -1,16 +1,16 @@
 <?php
 /**
- * Vite debundle plugin for Craft CMS 3.x
+ * Thunderblight plugin for Craft CMS 3.x
  *
- * Debundle your Vite manifests in Craft
+ * Debundle your Vite manifests quickly
  *
- * @link      https://github.com/hungrysandwichclub
- * @copyright Copyright (c) 2021 Hungry Sandwich
+ * @link      https://hungrysandwich.club
+ * @copyright Copyright (c) 2021 Hungry Sandwich Club
  */
 
-namespace hungrysandwichclub\vitedebundle\twigextensions;
+namespace hungrysandwichclub\thunderblight\twigextensions;
 
-use hungrysandwichclub\vitedebundle\ViteDebundle;
+use hungrysandwichclub\thunderblight\Thunderblight;
 
 use Craft;
 
@@ -19,29 +19,21 @@ use Twig\TwigFilter;
 use Twig\TwigFunction;
 
 /**
- * Twig can be extended in many ways; you can add extra tags, filters, tests, operators,
- * global variables, and functions. You can even extend the parser itself with
- * node visitors.
- *
- * http://twig.sensiolabs.org/doc/advanced.html
- *
- * @author    Hungry Sandwich
- * @package   ViteDebundle
- * @since     1.1.0
+ * @author    Hungry Sandwich Club
+ * @package   Thunderblight
+ * @since     1.0.0
  */
-class ViteDebundleTwigExtension extends AbstractExtension
+class ThunderblightTwigExtension extends AbstractExtension
 {
     // Public Methods
     // =========================================================================
 
     /**
-     * Returns the name of the extension.
-     *
-     * @return string The extension name
+     * @inheritdoc
      */
     public function getName()
     {
-        return 'ViteDebundle';
+        return 'Thunderblight';
     }
 
     /**
@@ -50,7 +42,7 @@ class ViteDebundleTwigExtension extends AbstractExtension
     public function getFilters()
     {
         return [
-            new TwigFilter('vitedebundle', [$this, 'debundle']),
+            new TwigFilter('thunderblight', [$this, 'debundle']),
         ];
     }
 
