@@ -1,6 +1,6 @@
 {
     "name": "hungrysandwichclub/vite-debundle",
-    "description": "Craft CMS plugin to debundle your Vite manifests ⚡️",
+    "description": "Debundle your Vite manifests quickly",
     "type": "craft-plugin",
     "version": "1.1.0",
     "keywords": [
@@ -31,11 +31,11 @@
         }
     },
     "extra": {
-        "name": "Vite debundle",
+        "name": "Thunderblight",
         "handle": "vite-debundle",
         "developer": "Hungry Sandwich",
-        "developerUrl": "https://github.com/hungrysandwichclub",
-        "documentationUrl": "???",
+        "developerUrl": "https://hungrysandwich.club",
+        "documentationUrl": "https://github.com/hungrysandwichclub",
         "changelogUrl": "???",
         "class": "hungrysandwichclub\\vitedebundle\\ViteDebundle"
     }
