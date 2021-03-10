@@ -2,7 +2,7 @@
     "name": "hungrysandwichclub/thunderblight",
     "description": "Debundle your Vite manifests quickly",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
         "craft",
         "cms",

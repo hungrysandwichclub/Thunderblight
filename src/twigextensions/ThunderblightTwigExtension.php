@@ -55,10 +55,20 @@ class ThunderblightTwigExtension extends AbstractExtension
     {
         // Get manifest from input and json_decode it
         $path = $input;
-        $assetsManifest = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . $path), true) ?: [];
 
         // Todo: test how this functions with more than one html file
-        $file = $assetsManifest['index.html'];
+        try {
+
+            $assetsManifest = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . $path), true) ?: [];
+            $file = $assetsManifest['index.html'];
+
+        } catch (\Exception $e) {
+
+            Craft::log('The request to domain.com failed: '.$e->getMessage(),
+               LogLevel::Warning, false, 'Thunderblight');
+
+            return false;
+        }
 
         // Initalise output array
         $output["css"] = [];
@@ -66,25 +76,31 @@ class ThunderblightTwigExtension extends AbstractExtension
         $output["assets"] = [];
 
         // Parse or build CSS
-        if (is_array($file["css"])) {
-            $output["css"] = $file["css"];
-        } else {
-            array_push($output["css"], $file["css"]);
+        if (array_key_exists("css", $file)) {
+            if (is_array($file["css"])) {
+                $output["css"] = $file["css"];
+            } else {
+                array_push($output["css"], $file["css"]);
+            }
         }
 
         // Parse or build JS
-        if (is_array($file["file"])) {
-            $output["js"] = $file["file"];
-        } else {
-            array_push($output["js"], $file["file"]);
+        if (array_key_exists("file", $file)) {
+            if (is_array($file["file"])) {
+                $output["js"] = $file["file"];
+            } else {
+                array_push($output["js"], $file["file"]);
+            }
         }
 
         // Parse or build Assets
         // Todo: how should these be incorpated into the build?
-        if (is_array($file["assets"])) {
-            $output["assets"] = $file["assets"];
-        } else {
-            array_push($output["assets"], $file["assets"]);
+        if (array_key_exists("assets", $file)) {
+            if (is_array($file["assets"])) {
+                $output["assets"] = $file["assets"];
+            } else {
+                array_push($output["assets"], $file["assets"]);
+            }
         }
 
         return $output;
